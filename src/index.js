@@ -16,7 +16,7 @@ const ReactStoreBadges = ({
   locale = (typeof navigator !== 'undefined' && navigator.language || defaultLocale),
   width = 135,
   height = width / HEIGHT_RATIO,
-  target = "_self"
+  target = "_blank"
 }) => {
   let shortCode = locale = locale.toLowerCase()
   const expeptionLocale = ["zh-cn", "zh-tw"];

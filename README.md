@@ -52,7 +52,7 @@ react-store-badge uses SVG files, (optimized by svgo) so no worries about image 
 | **locale** | <code>string</code> | 'en-us' | locale name |
 | **width** | <code>number</code> | 135 | width for badge size |
 | **height** | <code>number</code> | 40 | height for badge size |
-| **target** | <code>'_self'&#124;'_blank'&#124;'_parent'&#124;'_top'</code> | '_self' | target for url to be opened |
+| **target** | <code>'_self'&#124;'_blank'&#124;'_parent'&#124;'_top'</code> | '_blank' | target for url to be opened |
 ## Localization
 
 ### Supported locales
