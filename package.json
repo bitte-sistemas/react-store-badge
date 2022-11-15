@@ -1,7 +1,7 @@
 {
-  "name": "@bitte-sistemas/react-store-badges",
-  "version": "0.0.7-development",
-  "description": "react-store-badges React component",
+  "name": "@bitte-sistemas/react-store-badge",
+  "version": "1.0.0",
+  "description": "react-store-badge React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -35,7 +35,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitte-sistemas/react-store-badges.git"
+    "url": "https://github.com/bitte-sistemas/react-store-badge.git"
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/"

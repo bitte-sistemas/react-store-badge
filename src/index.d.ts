@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactStoreBadges from './index.js';
+import ReactStoreBadge from './index.js';
 
-export interface ReactStoreBadgesProps {
+export interface ReactStoreBadgeProps {
   /** url of App Store and Play Store */
   url: string
 
@@ -24,5 +24,5 @@ export interface ReactStoreBadgesProps {
   target?: "_self" | "_blank" | "_parent" | "_top"
 }
 
-declare const ReactStoreBadges: ReactStoreBadgesProps
-export default ReactStoreBadges;
+declare const ReactStoreBadge: ReactStoreBadgeProps
+export default ReactStoreBadge;

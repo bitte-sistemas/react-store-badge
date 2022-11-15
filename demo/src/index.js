@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-import ReactStoreBadges from '../../src'
+import ReactStoreBadge from '../../src'
 
 class Demo extends Component {
   constructor(props) {
@@ -43,22 +43,22 @@ class Demo extends Component {
               justifyContent:'space-between'
             }}
           >
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               url={'https://apps.apple.com/app/'}
             />
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'android'}
               url={'https://play.google.com/store/apps/details?id='}
               locale={'ko-kr'}
             />
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               url={'https://apps.apple.com/app/'}
               locale={'es-ES'}
             />
 
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'android'}
               url={'https://play.google.com/store/apps/details?id='}
               locale={'zh-CN'}
@@ -72,7 +72,7 @@ class Demo extends Component {
         >
           <h1>Locale Change</h1>
           <div>
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               url={'https://apps.apple.com/app/'}
               locale={locale}
@@ -87,19 +87,19 @@ class Demo extends Component {
         <div>
           <h1>Dynamic width(heights auto generated)</h1>
           <div>
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               width={200}
             />
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'android'}
               width={250}
             />
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               width={300}
             />
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'android'}
               width={500}
             />
@@ -108,7 +108,7 @@ class Demo extends Component {
         <div>
           <h1>Open in new target</h1>
           <div>
-            <ReactStoreBadges
+            <ReactStoreBadge
               platform={'ios'}
               url={'https://apps.apple.com/app/'}
               target="_blank"

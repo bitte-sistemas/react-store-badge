@@ -2,36 +2,38 @@ import React, { useState, useLayoutEffect } from 'react';
 
 const HEIGHT_RATIO = 3.375;
 
-const getImage = (locale = 'en-us', code = locale) => {
+const getImage = (locale = 'en-us') => {
   return {
     ios: `https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
-    android: `https://raw.github.com/bitte-sistemas/google-play-badge-svg/master/img/${code}_get.svg?sanitize=true`
+    android: `https://raw.github.com/bitte-sistemas/google-play-badge-svg/master/img/${locale}_get.svg?sanitize=true`
   }
 }
 
-const ReactStoreBadges = ({
-  url,
-  defaultLocale = 'en-us',
+const ReactStoreBadge = ({
   platform,
+  url,
   locale = (typeof navigator !== 'undefined' && navigator.language || defaultLocale),
+  defaultLocale = 'en-us',
   width = 135,
   height = width / HEIGHT_RATIO,
   target = "_blank"
 }) => {
-  let shortCode = locale = locale.toLowerCase()
-  const expeptionLocale = ["zh-cn", "zh-tw"];
-  if (expeptionLocale.indexOf(locale) === -1) {
-    shortCode = locale.split(/[_-]/)[0];
+  locale = locale.toLowerCase()
+
+  // handles ptBR
+  const nonHyphenatedRegex = /^[a-zA-Z]{4}$/
+  if(locale.match(nonHyphenatedRegex)) {
+    locale = `${locale.slice(0,2)}-${locale.slice(2)}`
   }
 
-  const [image, setImage] = useState(getImage(locale, shortCode))
+  const [image, setImage] = useState(getImage(locale))
 
   const setDefaultImage = () => {
-    setImage(getImage(defaultLocale, shortCode))
+    setImage(getImage(defaultLocale))
   }
 
   useLayoutEffect(() => {
-    setImage(getImage(locale, shortCode))
+    setImage(getImage(locale))
   }, [locale])
 
   return (
@@ -55,4 +57,4 @@ const ReactStoreBadges = ({
     </a>
   );
 }
-export default ReactStoreBadges
+export default ReactStoreBadge

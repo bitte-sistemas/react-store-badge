@@ -1,10 +1,9 @@
-import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import ReactStoreBadges from 'src/'
+import ReactStoreBadge from 'src/'
 
-describe('ReactStoreBadges', () => {
+describe('ReactStoreBadge', () => {
   let node;
 
   beforeEach(() => {
@@ -20,14 +19,14 @@ describe('ReactStoreBadges', () => {
     unmountComponentAtNode(node)
   })
 
-  it('renders ReactStoreBadges successfully', () => {
-    render(<ReactStoreBadges/>, node, () => {
+  it('renders ReactStoreBadge successfully', () => {
+    render(<ReactStoreBadge/>, node, () => {
     })
   })
 
-  it('renders ReactStoreBadges with props', () => {
+  it('renders ReactStoreBadge with props', () => {
     render(
-      <ReactStoreBadges 
+      <ReactStoreBadge
         platform={'ios'}
         url={'https://apps.apple.com/app/'}
         locale={'en-us'}
@@ -40,17 +39,17 @@ describe('ReactStoreBadges', () => {
 
   it('locale branching', () => {
     render(
-      <ReactStoreBadges
+      <ReactStoreBadge
         locale={'zh-cn'}
       />, node, () => {
     })
     render(
-      <ReactStoreBadges
+      <ReactStoreBadge
         locale={'zh-tw'}
       />, node, () => {
     })
     render(
-      <ReactStoreBadges
+      <ReactStoreBadge
         locale={'en-us'}
       />, node, () => {
     })
@@ -58,7 +57,7 @@ describe('ReactStoreBadges', () => {
 
   it('wrong locale, wrong image', () => {
     render(
-      <ReactStoreBadges
+      <ReactStoreBadge
         defaultLocale={'abcd'}
         locale={'abc'}
       />, node, () => {
