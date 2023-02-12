@@ -5,7 +5,7 @@ const HEIGHT_RATIO = 3.375;
 const getImage = (locale = 'en-us') => {
   return {
     ios: `https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
-    android: `https://bitte-sistemas.github.io/google-play-badge-svg/img/${locale}_get.svg?sanitize=true`
+    android: `https://bitte-tecnologia.github.io/google-play-badge-svg/img/${locale}_get.svg?sanitize=true`
   }
 }
 
