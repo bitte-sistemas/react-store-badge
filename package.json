@@ -1,6 +1,6 @@
 {
-  "name": "@bitte-sistemas/react-store-badge",
-  "version": "1.0.1",
+  "name": "@bitte-tecnologia/react-store-badge",
+  "version": "1.0.0",
   "description": "react-store-badge React component",
   "main": "lib/index.js",
   "module": "es/index.js",
