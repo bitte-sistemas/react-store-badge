@@ -1,6 +1,6 @@
 {
   "name": "@bitte-tecnologia/react-store-badge",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "react-store-badge React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -35,7 +35,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitte-sistemas/react-store-badge.git"
+    "url": "https://github.com/bitte-tecnologia/react-store-badge.git"
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/"
